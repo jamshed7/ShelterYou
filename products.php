@@ -1,12 +1,5 @@
 <?php
-var_dump($_SESSION);
-if($_SESSION['loggedIn'] != "yes")
-{
-    // not logged in
-    header('Location: about.html');
-    exit();
-}
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +28,11 @@ https://www.tooplate.com/view/2114-pixie
 -->
   </head>
 
+  <?php
+  if($_SESSION['loggedIn']=="no"){
+    header('Location: contact.html');
+  }
+  ?>
   <body>
     
     <!-- Pre Header -->

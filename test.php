@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -20,7 +21,6 @@ if($result->num_rows > 0){
     //echo $array['Password'];
     //echo $_POST["password"];
     if($_POST["password123"] == $array["Password"]){
-        session_start();
         $_SESSION['loggedIn'] = "yes";
         header('Location: products.php');
         exit();

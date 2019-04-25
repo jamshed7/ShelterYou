@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +29,9 @@ https://www.tooplate.com/view/2114-pixie
   </head>
 
   <body>
+  <?php
+  $_SESSION['loggedIn'] = 'no';
+  ?>
 
     <!-- Pre Header -->
     <div id="pre-header">
