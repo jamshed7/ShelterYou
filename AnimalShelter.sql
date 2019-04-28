@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 21, 2019 at 07:45 PM
+-- Generation Time: Apr 24, 2019 at 09:23 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -58,6 +58,33 @@ CREATE TABLE `ANIMAL` (
   `Num_of_likes` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `ANIMAL`
+--
+
+INSERT INTO `ANIMAL` (`Animal_ID`, `Animal_type`, `Name`, `Age`, `Size`, `Breed`, `Color`, `Posted_date`, `Description`, `Is_available`, `Num_of_likes`) VALUES
+(1, 'Snake', 'Ratty', 1, 'Small', 'Corn Snake', 'White', '2019-04-24 00:00:00', 'A corn snake, named Ratty', 1, NULL),
+(2, 'Horse', 'Homie', 3, 'Medium', 'Mustang', 'Black', '2019-04-09 00:00:00', 'A mustang horse', 1, NULL),
+(3, 'Snake', 'Nagini', 2, 'Medium', 'Eyelash Viper', 'Golden', '2019-03-04 00:00:00', 'A Nagini Snake', 0, NULL),
+(4, 'Horse', 'Apollo', 8, 'Small', 'Morgan', 'Dark Brown', '2019-02-04 00:00:00', 'Small horse', 0, NULL),
+(5, 'Snake', 'Slash', 10, 'Large', 'Green Tree Python', 'Green', '2019-01-06 00:00:00', 'Very stark green in color', 1, NULL),
+(6, 'Snake', 'Zippy', 12, 'Large', 'Python Curtus', 'Orange', '2018-01-15 00:00:00', 'Beautiful snake', 0, NULL),
+(7, 'Horse', 'Rolo', 5, 'Medium', 'Friesian horse', 'Black', '2019-06-07 00:00:00', 'Playful', 1, NULL),
+(8, 'Horse', 'Dexter', 12, 'Small', 'Falabella', 'Faded Yellow', '2019-10-04 00:00:00', 'Smartest horse you will find', 0, NULL),
+(9, 'Snake', 'Slyther', 8, 'Large', 'Eastern green mamba', 'Green', '2019-04-09 00:00:00', 'New at the Shelter', 0, NULL);
+(10, 'Horse', 'Charles', 4, 'Large', 'American Quarter Horse', 'Brown', '2019-02-12 00:00:00', 'One of the largest horses in our shelter', 1,NULL);
+(11, 'Snake', 'Ruxpin', 5, 'Medium', 'King Cobra', 'Grey', '2019-02-17 00:00:00', 'A gentle soul for a snake', 1, NULL);
+(12, 'Horse', 'Emery', 9, 'Medium', 'Shire', 'Dark Brown', '2019-04-01 00:00:00', 'Cute ol big boy', 0, NULL);
+(13, 'Snake', 'Frost', 10, 'Large', 'Boa constrictor', 'Mossy Green', '2019-02-12 00:00:00', 'Looks scarier than is', 1, NULL);
+(14, 'Horse', 'Milky', 3, 'Small', 'Appaloosa', 'Black', '2019-01-05 00:00:00', 'Small horse for its breed', 1, NULL);
+(15, 'Snake', 'Luger', 7, 'Large', 'Burmese Python', 'Patterned Dark Green', '2019-03-13 00:00:00', 'Aggresive young fella', 1, NULL);
+(16, 'Horse', 'Oz', , 'Large', 'Anglo-Arabian', 'Brown with white spots', '2019-03-24 00:00:00', 'Fastest horse at the shelter', 0, NULL);
+(17, 'Snake', 'JJ', 8, 'Small', 'Eastern Coral Snake', 'Black and Red', '2019-02-05 00:00:00', 'Very Toxic, avoid contact', 1, NULL);
+(18, 'Horse', 'Neutron', 9, 'Large', 'Criollo', 'White', '2019-04-04 00:00:00', 'Sturdy horse', 1, NULL);
+(19, 'Snake', 'Kush', 3, 'Small', 'Rosy Boa', 'Red Brown', '2019-01-09 00:00:00', 'Cute smol snek', 0, NULL);
+(20, 'Horse', 'Dimitri', 5, 'Small', 'American Miniature', 'Brown', '2019-04-13 00:00:00', 'Very needy but adorable', 1, NULL);
+
+
 -- --------------------------------------------------------
 
 --
@@ -92,6 +119,16 @@ CREATE TABLE `HORSE` (
   `Animal_ID` int(11) NOT NULL,
   `is_raceHorse` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `HORSE`
+--
+
+INSERT INTO `HORSE` (`Animal_ID`, `is_raceHorse`) VALUES
+(2, 1),
+(4, 0),
+(7, 0),
+(8, 1);
 
 -- --------------------------------------------------------
 
@@ -148,6 +185,17 @@ CREATE TABLE `SNAKE` (
   `Animal_ID` int(11) NOT NULL,
   `is_Poisonous` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `SNAKE`
+--
+
+INSERT INTO `SNAKE` (`Animal_ID`, `is_Poisonous`) VALUES
+(1, 1),
+(3, 1),
+(5, 0),
+(6, 1),
+(9, 0);
 
 --
 -- Indexes for dumped tables
@@ -238,7 +286,7 @@ ALTER TABLE `ADMIN`
 -- AUTO_INCREMENT for table `ANIMAL`
 --
 ALTER TABLE `ANIMAL`
-  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `GUEST`
@@ -250,7 +298,7 @@ ALTER TABLE `GUEST`
 -- AUTO_INCREMENT for table `HORSE`
 --
 ALTER TABLE `HORSE`
-  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `PROFILE`
@@ -262,7 +310,7 @@ ALTER TABLE `PROFILE`
 -- AUTO_INCREMENT for table `SNAKE`
 --
 ALTER TABLE `SNAKE`
-  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

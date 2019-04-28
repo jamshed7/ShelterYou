@@ -1,6 +1,20 @@
 <?php
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "ANIMAL_SHELTER";
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,71 +133,31 @@ https://www.tooplate.com/view/2114-pixie
               <h1>Featured Items</h1>
             </div>
           </div>
+
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-01.jpg" alt="Item 1">
-                  <h4>Proin vel ligula</h4>
-                  <h6>$15.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-02.jpg" alt="Item 2">
-                  <h4>Erat odio rhoncus</h4>
-                  <h6>$25.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-03.jpg" alt="Item 3">
-                  <h4>Integer vel turpis</h4>
-                  <h6>$35.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 4">
-                  <h4>Sed purus quam</h4>
-                  <h6>$45.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 5">
-                  <h4>Morbi aliquet</h4>
-                  <h6>$55.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 6">
-                  <h4>Urna ac diam</h4>
-                  <h6>$65.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 7">
-                  <h4>Proin eget imperdiet</h4>
-                  <h6>$75.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 8">
-                  <h4>Nullam risus nisl</h4>
-                  <h6>$85.00</h6>
-                </div>
-              </a>
-              <a href="single-product.html">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 9">
-                  <h4>Cras tempus</h4>
-                  <h6>$95.00</h6>
-                </div>
-              </a>
+                            <?php
+
+                            $query = "SELECT Name FROM ANIMAL";
+
+                            if($result = $conn->query($query) )
+                            {
+                              while( $row = mysqli_fetch_array($result) )
+                              {
+                                echo '<a href="single-product.html">';
+                                echo '<img src="assets/animal_pics/2.jpg" alt="Item 1">';
+                                echo "<div>";
+                                echo "<h4>".$row["Name"]."</h4>";
+                                echo "<h6>Is Available</h6>";
+                                echo "</div>";
+                                echo '</a>';
+
+                              }
+                            }
+                            else{
+                              echo "0 results";
+                            }
+                             ?>
             </div>
           </div>
         </div>
