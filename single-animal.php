@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+single-animal<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -27,7 +27,7 @@ https://www.tooplate.com/view/2114-pixie
   </head>
 
   <body>
-    
+
     <!-- Pre Header -->
     <div id="pre-header">
       <div class="container">
@@ -69,7 +69,7 @@ https://www.tooplate.com/view/2114-pixie
 
     <!-- Page Content -->
     <!-- Single Starts Here -->
-    <div class="single-product">
+    <div class="single-animal">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -124,8 +124,8 @@ https://www.tooplate.com/view/2114-pixie
               <span>7 left on stock</span>
               <form action="" method="get">
                 <label for="quantity">Quantity:</label>
-                <input name="quantity" type="quantity" class="quantity-text" id="quantity" 
-                	onfocus="if(this.value == '1') { this.value = ''; }" 
+                <input name="quantity" type="quantity" class="quantity-text" id="quantity"
+                	onfocus="if(this.value == '1') { this.value = ''; }"
                     onBlur="if(this.value == '') { this.value = '1';}"
                     value="1">
                 <input type="submit" class="button" value="Order Now!">
@@ -158,63 +158,63 @@ https://www.tooplate.com/view/2114-pixie
           </div>
           <div class="col-md-12">
             <div class="owl-carousel owl-theme">
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-01.jpg" alt="Item 1">
                   <h4>Proin vel ligula</h4>
                   <h6>$15.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-02.jpg" alt="Item 2">
                   <h4>Erat odio rhoncus</h4>
                   <h6>$25.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-03.jpg" alt="Item 3">
                   <h4>Integer vel turpis</h4>
                   <h6>$35.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-04.jpg" alt="Item 4">
                   <h4>Sed purus quam</h4>
                   <h6>$45.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-05.jpg" alt="Item 5">
                   <h4>Morbi aliquet</h4>
                   <h6>$55.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-06.jpg" alt="Item 6">
                   <h4>Urna ac diam</h4>
                   <h6>$65.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-04.jpg" alt="Item 7">
                   <h4>Proin eget imperdiet</h4>
                   <h6>$75.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-05.jpg" alt="Item 8">
                   <h4>Nullam risus nisl</h4>
                   <h6>$85.00</h6>
                 </div>
               </a>
-              <a href="single-product.html">
+              <a href="single-animal.php">
                 <div class="featured-item">
                   <img src="assets/images/item-06.jpg" alt="Item 9">
                   <h4>Cras tempus</h4>
@@ -247,8 +247,8 @@ https://www.tooplate.com/view/2114-pixie
                   <div class="row">
                     <div class="col-md-7">
                       <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" 
-                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }" 
+                        <input name="email" type="text" class="form-control" id="email"
+                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }"
                     	onBlur="if(this.value == '') { this.value = 'Your Email...';}"
                     	value="Your Email..." required="">
                       </fieldset>
@@ -269,7 +269,7 @@ https://www.tooplate.com/view/2114-pixie
     <!-- Subscribe Form Ends Here -->
 
 
-    
+
     <!-- Footer Starts Here -->
     <div class="footer">
       <div class="container">
@@ -312,8 +312,8 @@ https://www.tooplate.com/view/2114-pixie
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 Company Name 
-                
+              <p>Copyright &copy; 2019 Company Name
+
                 - Design: <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
             </div>
           </div>
@@ -335,7 +335,7 @@ https://www.tooplate.com/view/2114-pixie
     <script src="assets/js/flex-slider.js"></script>
 
 
-    <script language = "text/Javascript"> 
+    <script language = "text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
       if(! cleared[t.id]){                      // function makes it static and global
