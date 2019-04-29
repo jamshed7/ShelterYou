@@ -150,7 +150,7 @@ if ($result->num_rows > 0) {
 <?php $user_ID = $_POST["userID"]; ?>
 <?php $animal_ID = $_POST["animalID"]; ?>
 <?php $_question = $_POST["question"]; ?>
-<?php $sql = "Insert into INQUIRY VALUES (".$user_ID.",".$animal_ID.",".$_question.","."NULL".",".date("Y-m-d h:i:s").","."NULL".");";
+<?php $sql = "Insert into INQUIRY VALUES ('$user_ID','$animal_ID','$_question',NULL,date("Y-m-d h:i:s"),NULL)";
 $result = $conn->query($sql);
 mysqli_query($result);
 ?>

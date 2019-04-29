@@ -150,7 +150,7 @@ if ($result->num_rows > 0) {
 <?php $user_ID = $_POST["userID"]; ?>
 <?php $animal_ID = $_POST["animalID"]; ?>
 <?php $_amount = $_POST["amount"]; ?>
-<?php $sql = "Insert into DONATION VALUES (".$user_ID.",".date("Y-m-d h:i:s").",".$_amount.",".$animal_ID.");";
+<?php $sql = "Insert into DONATION VALUES ('$user_ID',date("Y-m-d h:i:s"),'$_amount','$animal_ID')";
 $result = $conn->query($sql);
 mysqli_query($result);
 ?>
