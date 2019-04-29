@@ -71,17 +71,17 @@ INSERT INTO `ANIMAL` (`Animal_ID`, `Animal_type`, `Name`, `Age`, `Size`, `Breed`
 (6, 'Snake', 'Zippy', 12, 'Large', 'Python Curtus', 'Orange', '2018-01-15 00:00:00', 'Beautiful snake', 0, NULL),
 (7, 'Horse', 'Rolo', 5, 'Medium', 'Friesian horse', 'Black', '2019-06-07 00:00:00', 'Playful', 1, NULL),
 (8, 'Horse', 'Dexter', 12, 'Small', 'Falabella', 'Faded Yellow', '2019-10-04 00:00:00', 'Smartest horse you will find', 0, NULL),
-(9, 'Snake', 'Slyther', 8, 'Large', 'Eastern green mamba', 'Green', '2019-04-09 00:00:00', 'New at the Shelter', 0, NULL);
-(10, 'Horse', 'Charles', 4, 'Large', 'American Quarter Horse', 'Brown', '2019-02-12 00:00:00', 'One of the largest horses in our shelter', 1,NULL);
-(11, 'Snake', 'Ruxpin', 5, 'Medium', 'King Cobra', 'Grey', '2019-02-17 00:00:00', 'A gentle soul for a snake', 1, NULL);
-(12, 'Horse', 'Emery', 9, 'Medium', 'Shire', 'Dark Brown', '2019-04-01 00:00:00', 'Cute ol big boy', 0, NULL);
-(13, 'Snake', 'Frost', 10, 'Large', 'Boa constrictor', 'Mossy Green', '2019-02-12 00:00:00', 'Looks scarier than is', 1, NULL);
-(14, 'Horse', 'Milky', 3, 'Small', 'Appaloosa', 'Black', '2019-01-05 00:00:00', 'Small horse for its breed', 1, NULL);
-(15, 'Snake', 'Luger', 7, 'Large', 'Burmese Python', 'Patterned Dark Green', '2019-03-13 00:00:00', 'Aggresive young fella', 1, NULL);
-(16, 'Horse', 'Oz', , 'Large', 'Anglo-Arabian', 'Brown with white spots', '2019-03-24 00:00:00', 'Fastest horse at the shelter', 0, NULL);
-(17, 'Snake', 'JJ', 8, 'Small', 'Eastern Coral Snake', 'Black and Red', '2019-02-05 00:00:00', 'Very Toxic, avoid contact', 1, NULL);
-(18, 'Horse', 'Neutron', 9, 'Large', 'Criollo', 'White', '2019-04-04 00:00:00', 'Sturdy horse', 1, NULL);
-(19, 'Snake', 'Kush', 3, 'Small', 'Rosy Boa', 'Red Brown', '2019-01-09 00:00:00', 'Cute smol snek', 0, NULL);
+(9, 'Snake', 'Slyther', 8, 'Large', 'Eastern green mamba', 'Green', '2019-04-09 00:00:00', 'New at the Shelter', 0, NULL),
+(10, 'Horse', 'Charles', 4, 'Large', 'American Quarter Horse', 'Brown', '2019-02-12 00:00:00', 'One of the largest horses in our shelter', 1,NULL),
+(11, 'Snake', 'Ruxpin', 5, 'Medium', 'King Cobra', 'Grey', '2019-02-17 00:00:00', 'A gentle soul for a snake', 1, NULL),
+(12, 'Horse', 'Emery', 9, 'Medium', 'Shire', 'Dark Brown', '2019-04-01 00:00:00', 'Cute ol big boy', 0, NULL),
+(13, 'Snake', 'Frost', 10, 'Large', 'Boa constrictor', 'Mossy Green', '2019-02-12 00:00:00', 'Looks scarier than is', 1, NULL),
+(14, 'Horse', 'Milky', 3, 'Small', 'Appaloosa', 'Black', '2019-01-05 00:00:00', 'Small horse for its breed', 1, NULL),
+(15, 'Snake', 'Luger', 7, 'Large', 'Burmese Python', 'Patterned Dark Green', '2019-03-13 00:00:00', 'Aggresive young fella', 1, NULL),
+(16, 'Horse', 'Oz', 6, 'Large', 'Anglo-Arabian', 'Brown with white spots', '2019-03-24 00:00:00', 'Fastest horse at the shelter', 0, NULL),
+(17, 'Snake', 'JJ', 8, 'Small', 'Eastern Coral Snake', 'Black and Red', '2019-02-05 00:00:00', 'Very Toxic, avoid contact', 1, NULL),
+(18, 'Horse', 'Neutron', 9, 'Large', 'Criollo', 'White', '2019-04-04 00:00:00', 'Sturdy horse', 1, NULL),
+(19, 'Snake', 'Kush', 3, 'Small', 'Rosy Boa', 'Red Brown', '2019-01-09 00:00:00', 'Cute smol snek', 0, NULL),
 (20, 'Horse', 'Dimitri', 5, 'Small', 'American Miniature', 'Brown', '2019-04-13 00:00:00', 'Very needy but adorable', 1, NULL);
 
 
