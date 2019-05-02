@@ -78,9 +78,6 @@ https://www.tooplate.com/view/2114-pixie
               <a class="nav-link" href="animals.php">Animals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="donate_money.php">Donate</a>
             </li>
             <li class="nav-item">
@@ -88,6 +85,9 @@ https://www.tooplate.com/view/2114-pixie
             </li>
             <li class="nav-item">
               <a class="nav-link" href="add_animal.php">Enlist for Adoption</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
             </li>
           </ul>
         </div>
