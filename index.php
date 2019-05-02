@@ -220,10 +220,6 @@ https://www.tooplate.com/view/2114-pixie
     <!-- Subscribe Form Ends Here -->
 
 
-
-
-
-
     <!-- Sub Footer Starts Here -->
     <div class="sub-footer">
       <div class="container">

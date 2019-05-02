@@ -1,20 +1,20 @@
 <html>
 <head><title>Add Animal</title></head>
-<body> 
+<body>
 
 <?php
 
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "shelteryou";
+$dbname = "ANIMAL_SHELTER";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $Name = $_POST['Name'];
 $Age = $_POST['Age'];
@@ -42,5 +42,3 @@ $conn->close();
 </body>
 
 </html>
-
-
