@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/flex-slider.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+
   </head>
   <?php
 $servername = "localhost";
@@ -47,7 +44,7 @@ if ($result->num_rows > 0) {
 ?>
 
   <body>
-    
+
     <!-- Pre Header -->
     <div id="pre-header">
       <div class="container">
@@ -68,21 +65,17 @@ if ($result->num_rows > 0) {
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.php">Return to Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products
+              <a class="nav-link" href="animals.php">Animals
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-              <span class="sr-only">(current)</span>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -99,7 +92,7 @@ if ($result->num_rows > 0) {
               <h1>Donate for an Animal</h1>
             </div>
           </div>
-          
+
           </div>
           <div class="col-md-6">
             <div class="right-content">
@@ -150,7 +143,7 @@ if ($result->num_rows > 0) {
 <?php $user_ID = $_POST["userID"]; ?>
 <?php $animal_ID = $_POST["animalID"]; ?>
 <?php $_amount = $_POST["amount"]; ?>
-<?php $d=strtotime("today"); 
+<?php $d=strtotime("today");
 $_date = date("Y-m-d h:i:s", $d); ?>
 
 <?php $sql = "Insert into DONATION VALUES('$user_ID','$_date','$_amount','$animal_ID')";
@@ -158,56 +151,10 @@ $result = $conn->query($sql);
 mysqli_query($result);
 ?>
 
-        <!-- Footer Starts Here -->
-        <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="logo">
-              <img src="assets/images/header-logo.png" alt="">
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">How It Works ?</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="social-icons">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer Ends Here -->
 
 
-    <!-- Sub Footer Starts Here -->
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="copyright-text">
-              <p>Copyright &copy; 2019 ShelterYou 
-               <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Sub Footer Ends Here -->
+
+
 </body>
 </form>
 </html>

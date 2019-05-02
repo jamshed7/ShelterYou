@@ -1,4 +1,4 @@
-single-animal<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -49,10 +49,10 @@ https://www.tooplate.com/view/2114-pixie
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="products.html">Products
+              <a class="nav-link" href="animals.php">Products
                 <span class="sr-only">(current)</span>
               </a>
             </li>
