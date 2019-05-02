@@ -1,6 +1,19 @@
 <?php
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "ANIMAL_SHELTER";
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +49,7 @@ https://www.tooplate.com/view/2114-pixie
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>Suspendisse laoreet magna vel diam lobortis imperdiet</span>
+            <span>Horses are the real man's best friend</span>
           </div>
         </div>
       </div>
@@ -45,7 +58,7 @@ https://www.tooplate.com/view/2114-pixie
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets/images/header-logo.png" alt=""></a>
+        <!--<a class="navbar-brand" href="#"><img src="assets/images/new-logo.png" alt=""></a>-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -84,9 +97,8 @@ https://www.tooplate.com/view/2114-pixie
           <div class="col-md-8 col-sm-12">
             <div id="filters" class="button-group">
               <button class="btn btn-primary" data-filter="*">All Animals</button>
-              <button class="btn btn-primary" data-filter=".new">Newest</button>
-              <button class="btn btn-primary" data-filter=".low">Low Price</button>
-              <button class="btn btn-primary" data-filter=".high">Hight Price</button>
+              <button class="btn btn-primary" data-filter=".Horse">Horses</button>
+              <button class="btn btn-primary" data-filter=".Snake">Snakes</button>
             </div>
           </div>
         </div>
@@ -103,13 +115,14 @@ https://www.tooplate.com/view/2114-pixie
           {
             while( $row = mysqli_fetch_array($result) )
             {
-              echo '<div id="'.$i++.'" class="item new col-md-4">';
+              echo '<div id="'.$i.'" class="item '.$row[Animal_type].' col-md-4">';
               echo '<a href="single-animal.php">';
               echo '<div class="featured-item">';
-              echo '<img src="assets/images/product-01.jpg" alt="">';
+              echo '<img src="assets/animal_pics/'.$i++.'.jpg" alt="">';
+              //echo '<img src="assets/images/product-01.jpg" alt="">';
               echo '<h4>'.$row["Name"].'</h4>';
-              echo '<h6>Donation Fee $X</h6>';
-              echo '</div>'
+              echo '<h6>'.$row["Description"].'</h6>';
+              echo '</div>';
               echo '</a>';
               echo '</div>';
             }
@@ -119,100 +132,7 @@ https://www.tooplate.com/view/2114-pixie
           }
            ?>
 
-            <div id="1" class="item new col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-01.jpg" alt="">
-                  <h4>Proin vel ligula</h4>
-                  <h6>$15.00</h6>
-                </div>
-              </a>
-            </div>
 
-
-            <div id="2" class="item high col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-02.jpg" alt="">
-                  <h4>Erat odio rhoncus</h4>
-                  <h6>$25.00</h6>
-                </div>
-              </a>
-            </div>
-
-            <div id="3" class="item low col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-03.jpg" alt="">
-                  <h4>Integer vel turpis</h4>
-                  <h6>$35.00</h6>
-                </div>
-              </a>
-            </div>
-
-
-            <div id="4" class="item low col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-04.jpg" alt="">
-                  <h4>Sed purus quam</h4>
-                  <h6>$45.00</h6>
-                </div>
-              </a>
-            </div>
-
-
-            <div id="5" class="item new high col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-05.jpg" alt="">
-                  <h4>Morbi aliquet</h4>
-                  <h6>$55.00</h6>
-                </div>
-              </a>
-            </div>
-
-
-            <div id="6" class="item new col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-06.jpg" alt="">
-                  <h4>Urna ac diam</h4>
-                  <h6>$65.00</h6>
-                </div>
-              </a>
-            </div>
-
-
-            <div id="7" class="item new high col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-03.jpg" alt="">
-                  <h4>Proin eget imperdiet</h4>
-                  <h6>$75.00</h6>
-                </div>
-              </a>
-            </div>
-
-
-            <div id="8" class="item low new col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-02.jpg" alt="">
-                  <h4>Nullam risus nisl</h4>
-                  <h6>$85.00</h6>
-                </div>
-              </a>
-            </div>
-            <div id="9" class="item new col-md-4">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/product-01.jpg" alt="">
-                  <h4>Cras tempus</h4>
-                  <h6>$95.00</h6>
-                </div>
-              </a>
-            </div>
 
 
         </div>
