@@ -45,6 +45,8 @@ https://www.tooplate.com/view/2114-pixie
   <body>
   <?php
   $_SESSION['loggedIn'] = 'no';
+  $_SESSION["Username"];
+  $_SESSION["selected_animal"];
   ?>
 
     <!-- Pre Header -->
@@ -73,13 +75,19 @@ https://www.tooplate.com/view/2114-pixie
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.php">Animals</a>
+              <a class="nav-link" href="animals.php">Animals</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Make an Inquiry</a>
+              <a class="nav-link" href="donate_money.php">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="make_inquiry.php">Make an Inquiry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add_animal.php">Enlist for Adoption</a>
             </li>
           </ul>
         </div>
@@ -130,7 +138,7 @@ https://www.tooplate.com/view/2114-pixie
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Featured Items</h1>
+              <h1>Featured Animals</h1>
             </div>
           </div>
 
@@ -138,20 +146,26 @@ https://www.tooplate.com/view/2114-pixie
             <div class="owl-carousel owl-theme">
                             <?php
 
-                            $query = "SELECT Name FROM ANIMAL";
-
+                            $query = "SELECT * FROM ANIMAL";
+                            $i = 1;
                             if($result = $conn->query($query) )
                             {
                               while( $row = mysqli_fetch_array($result) )
                               {
                                 echo '<a href="single-animal.php">';
-                                echo '<img src="assets/animal_pics/2.jpg" alt="Item 1">';
+                                echo '<img src="assets/animal_pics/'.$i++.'.jpg" alt="Item 1">';
                                 echo "<div>";
                                 echo "<h4>".$row["Name"]."</h4>";
-                                echo "<h6>Is Available</h6>";
+                                if($row[Is_available])
+                                {
+                                  echo "<h6>Is Available</h6>";
+                                }
+                                else
+                                {
+                                  echo "<h6>No longer Advailabe</h6>";
+                                }
                                 echo "</div>";
                                 echo '</a>';
-
                               }
                             }
                             else{
