@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 24, 2019 at 09:23 PM
+-- Generation Time: May 03, 2019 at 06:00 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -25,6 +25,13 @@ CREATE TABLE `ADMIN` (
   `SSN` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `ADMIN`
+--
+
+INSERT INTO `ADMIN` (`Profile_ID`, `SSN`) VALUES
+(10, 9999999);
+
 -- --------------------------------------------------------
 
 --
@@ -37,6 +44,20 @@ CREATE TABLE `ADOPTION` (
   `Adoption_date` datetime NOT NULL,
   `Adoption_fee` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ADOPTION`
+--
+
+INSERT INTO `ADOPTION` (`Adopter_ID`, `Adopted_animal_info`, `Adoption_date`, `Adoption_fee`) VALUES
+(1, 4, '2019-05-02 00:00:00', 100),
+(2, 6, '2019-05-02 00:00:00', 100),
+(3, 8, '2019-05-02 00:00:00', 100),
+(4, 3, '2019-05-02 00:00:00', 100),
+(5, 9, '2019-05-02 00:00:00', 100),
+(7, 12, '2019-05-02 00:00:00', 120),
+(8, 16, '2019-05-02 00:00:00', 120),
+(9, 19, '2019-05-02 00:00:00', 120);
 
 -- --------------------------------------------------------
 
@@ -72,18 +93,17 @@ INSERT INTO `ANIMAL` (`Animal_ID`, `Animal_type`, `Name`, `Age`, `Size`, `Breed`
 (7, 'Horse', 'Rolo', 5, 'Medium', 'Friesian horse', 'Black', '2019-06-07 00:00:00', 'Playful', 1, NULL),
 (8, 'Horse', 'Dexter', 12, 'Small', 'Falabella', 'Faded Yellow', '2019-10-04 00:00:00', 'Smartest horse you will find', 0, NULL),
 (9, 'Snake', 'Slyther', 8, 'Large', 'Eastern green mamba', 'Green', '2019-04-09 00:00:00', 'New at the Shelter', 0, NULL),
-(10, 'Horse', 'Charles', 4, 'Large', 'American Quarter Horse', 'Brown', '2019-02-12 00:00:00', 'One of the largest horses in our shelter', 1,NULL),
+(10, 'Horse', 'Charles', 4, 'Large', 'American Quarter Horse', 'Brown', '2019-02-12 00:00:00', 'One of the largest horses in our shelter', 1, NULL),
 (11, 'Snake', 'Ruxpin', 5, 'Medium', 'King Cobra', 'Grey', '2019-02-17 00:00:00', 'A gentle soul for a snake', 1, NULL),
 (12, 'Horse', 'Emery', 9, 'Medium', 'Shire', 'Dark Brown', '2019-04-01 00:00:00', 'Cute ol big boy', 0, NULL),
 (13, 'Snake', 'Frost', 10, 'Large', 'Boa constrictor', 'Mossy Green', '2019-02-12 00:00:00', 'Looks scarier than is', 1, NULL),
 (14, 'Horse', 'Milky', 3, 'Small', 'Appaloosa', 'Black', '2019-01-05 00:00:00', 'Small horse for its breed', 1, NULL),
 (15, 'Snake', 'Luger', 7, 'Large', 'Burmese Python', 'Patterned Dark Green', '2019-03-13 00:00:00', 'Aggresive young fella', 1, NULL),
-(16, 'Horse', 'Oz', 6, 'Large', 'Anglo-Arabian', 'Brown with white spots', '2019-03-24 00:00:00', 'Fastest horse at the shelter', 0, NULL),
-(17, 'Snake', 'JJ', 8, 'Small', 'Eastern Coral Snake', 'Black and Red', '2019-02-05 00:00:00', 'Very Toxic, avoid contact', 1, NULL),
+(16, 'Horse', 'Oz', 6, 'Large', 'Anglo-Arabian', 'Brown with white spo', '2019-03-24 00:00:00', 'Fastest horse at the shelter', 0, NULL),
+(17, 'Snake', 'JJ', 8, 'Small', 'Eastern Coral Snake', 'Black and Red', '2019-02-05 00:00:00', 'Very Toxic, avoid contact', 0, NULL),
 (18, 'Horse', 'Neutron', 9, 'Large', 'Criollo', 'White', '2019-04-04 00:00:00', 'Sturdy horse', 1, NULL),
 (19, 'Snake', 'Kush', 3, 'Small', 'Rosy Boa', 'Red Brown', '2019-01-09 00:00:00', 'Cute smol snek', 0, NULL),
 (20, 'Horse', 'Dimitri', 5, 'Small', 'American Miniature', 'Brown', '2019-04-13 00:00:00', 'Very needy but adorable', 1, NULL);
-
 
 -- --------------------------------------------------------
 
@@ -98,6 +118,53 @@ CREATE TABLE `DONATION` (
   `Donatee_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `DONATION`
+--
+
+INSERT INTO `DONATION` (`Donator_ID`, `Donation_date`, `Donation_amount`, `Donatee_ID`) VALUES
+(1, '2019-05-03 00:00:00', '100', 1),
+(1, '2019-05-03 00:00:00', '200', 2),
+(6, '2019-05-02 00:00:00', '342.33', 11),
+(4, '2019-05-05 00:00:00', '23.33', 11),
+(2, '2019-05-01 00:00:00', '34.66', 1),
+(8, '2019-04-15 00:00:00', '78.99', 2),
+(1, '2019-05-02 00:00:00', '13.33', 3),
+(7, '2019-05-03 00:00:00', '43.34', 3),
+(3, '2019-05-15 00:00:00', '39.10', 4),
+(9, '2019-04-18 00:00:00', '0.75', 4),
+(1, '2019-02-05 00:00:00', '1.25', 5),
+(7, '2019-03-14 00:00:00', '200.12', 5),
+(8, '2019-01-08 00:00:00', '1000.00', 6),
+(2, '2019-03-15 00:00:00', '10.59', 6),
+(5, '2019-05-01 00:00:00', '60.0', 7),
+(4, '2019-03-07 00:00:00', '1000000', 7),
+(2, '2019-04-08 00:00:00', '40.1', 8),
+(1, '2019-04-01 00:00:00', '16.00', 8),
+(9, '2019-04-09 00:00:00', '50.12', 9),
+(3, '2019-04-09 00:00:00', '800.31', 9),
+(2, '2019-04-01 00:00:00', '81.23', 10),
+(2, '2018-09-12 00:00:00', '139.00', 10),
+(2, '2019-04-09 00:00:00', '81.00', 11),
+(4, '2019-05-23 00:00:00', '90.12', 12),
+(2, '2019-03-20 00:00:00', '60.12', 12),
+(5, '2019-02-06 00:00:00', '60.12', 13),
+(1, '2018-11-13 00:00:00', '14.12', 13),
+(5, '2019-05-03 00:00:00', '100', 14),
+(7, '2019-05-03 00:00:00', '666', 14),
+(7, '2019-05-03 00:00:00', '34', 17),
+(1, '2019-05-03 00:00:00', '1000', 17),
+(1, '2019-05-03 00:00:00', '4000', 17),
+(1, '2019-05-03 00:00:00', '500', 17),
+(1, '2019-05-03 00:00:00', '800', 18),
+(1, '2019-05-03 00:00:00', '45', 18),
+(1, '2019-05-03 00:00:00', '100', 18),
+(1, '2019-05-03 00:00:00', '55', 19),
+(2, '2019-05-03 00:00:00', '500', 19),
+(1, '2019-05-03 00:00:00', '400', 19),
+(1, '2019-05-03 00:00:00', '800', 20),
+(6, '2019-05-03 00:00:00', '500', 20);
+
 -- --------------------------------------------------------
 
 --
@@ -108,6 +175,21 @@ CREATE TABLE `GUEST` (
   `Profile_ID` int(11) NOT NULL,
   `home_Type` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `GUEST`
+--
+
+INSERT INTO `GUEST` (`Profile_ID`, `home_Type`) VALUES
+(1, 'Homeless'),
+(2, 'Dorm'),
+(3, 'Lipscomb'),
+(4, 'Big Home'),
+(5, 'Apartment'),
+(6, 'Dorm'),
+(7, 'Farm'),
+(8, 'Big House'),
+(9, 'Farmhouse');
 
 -- --------------------------------------------------------
 
@@ -128,7 +210,13 @@ INSERT INTO `HORSE` (`Animal_ID`, `is_raceHorse`) VALUES
 (2, 1),
 (4, 0),
 (7, 0),
-(8, 1);
+(8, 1),
+(10, 1),
+(12, 0),
+(14, 1),
+(16, 1),
+(18, 0),
+(20, 1);
 
 -- --------------------------------------------------------
 
@@ -144,6 +232,22 @@ CREATE TABLE `INQUIRY` (
   `Inquiry_date` datetime DEFAULT NULL,
   `Answered_by` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `INQUIRY`
+--
+
+INSERT INTO `INQUIRY` (`Sender_ID`, `Animal_Info`, `Inquiry_question`, `Inquiry_answer`, `Inquiry_date`, `Answered_by`) VALUES
+(1, 1, 'Inquiry 1', NULL, '2019-05-03 12:00:00', NULL),
+(1, 4, 'Inquiry 2', NULL, '2019-05-03 12:00:00', NULL),
+(6, 20, 'Can we adopt animal if it\'s available?', 'Yes', '2019-05-09 00:00:00', 10),
+(7, 1, 'Why ant man not sacrifice his life in endgame?', NULL, '2019-05-01 00:00:00', NULL),
+(4, 11, 'Will Iron Man come back pls?', NULL, '2019-05-01 00:00:00', NULL),
+(5, 3, 'which color is it', NULL, '2019-05-02 00:00:00', NULL),
+(6, 11, 'Snake like KD?', NULL, '2019-05-01 00:00:00', NULL),
+(9, 12, 'Hi!', NULL, '2019-05-01 00:00:00', NULL),
+(8, 20, 'How do I contact you?', NULL, '2019-05-01 00:00:00', NULL),
+(8, 1, 'What breed?', NULL, '2019-04-17 00:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -175,6 +279,22 @@ CREATE TABLE `PROFILE` (
   `Join_Date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `PROFILE`
+--
+
+INSERT INTO `PROFILE` (`Profile_ID`, `First_Name`, `Last_Name`, `Profile_type`, `Mobile_Number`, `Email`, `Username`, `Password`, `Join_Date`) VALUES
+(1, 'Jamshed', 'Jahangir', 'User', '2145171082', 'jjdx11@gmail.com', 'jamshed', 'password', '2019-05-02 00:00:00'),
+(2, 'Harsh ', 'Aggarwal ', 'User', '1234', 'harsh@petfinder.com', 'harsh', 'password', '2019-05-02 00:00:00'),
+(3, 'Tausif', 'Zaman', 'User', '1234', 'tausif@petfinder.com', 'tausif', 'password', '2019-05-02 00:00:00'),
+(4, 'Adarsh ', 'Pai', 'User', '1234', 'adarsh@github.com', 'pai', 'password', '2019-05-01 00:00:00'),
+(5, 'Robert ', 'Brady', 'User', '6969', 'brady@email.com', 'bigrob', 'password', '2019-05-01 00:00:00'),
+(6, 'Ximena ', 'Huerta ', 'User', '534829', 'ximena@uta.edu', 'ximi', 'password', '2019-05-01 00:00:00'),
+(7, 'Keely', 'Morgan', 'User', '628282', 'keely@mavs.uta.edu', 'dog_lover', 'password', '2019-05-03 00:00:00'),
+(8, 'Iron', 'Man', 'User', '98710283', 'tonyy@gmail.com', 'ironman', 'my hart', '2019-05-03 00:00:00'),
+(9, 'Chris', 'Evans', 'User', '82739310', 'cap@gmail.com', 'lostintime', 'myshield', '2019-04-15 00:00:00'),
+(10, 'Shelter', 'You', 'Admin', '893810', 'shelteryou@gmail.com', 'shelterman', 'shelter', '2019-04-02 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -195,7 +315,16 @@ INSERT INTO `SNAKE` (`Animal_ID`, `is_Poisonous`) VALUES
 (3, 1),
 (5, 0),
 (6, 1),
-(9, 0);
+(9, 0),
+(11, 0),
+(13, 0),
+(15, 0),
+(17, 1),
+(19, 1),
+(20, 0),
+(21, 0),
+(22, 0),
+(23, 0);
 
 --
 -- Indexes for dumped tables
@@ -280,37 +409,37 @@ ALTER TABLE `SNAKE`
 -- AUTO_INCREMENT for table `ADMIN`
 --
 ALTER TABLE `ADMIN`
-  MODIFY `Profile_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Profile_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ANIMAL`
 --
 ALTER TABLE `ANIMAL`
-  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `GUEST`
 --
 ALTER TABLE `GUEST`
-  MODIFY `Profile_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Profile_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `HORSE`
 --
 ALTER TABLE `HORSE`
-  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `PROFILE`
 --
 ALTER TABLE `PROFILE`
-  MODIFY `Profile_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Profile_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `SNAKE`
 --
 ALTER TABLE `SNAKE`
-  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Animal_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Constraints for dumped tables

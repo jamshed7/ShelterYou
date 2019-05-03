@@ -159,7 +159,7 @@ if ($conn->connect_error) {
                                 }
                                 else
                                 {
-                                  echo "<h6>No longer Advailabe</h6>";
+                                  echo "<h6>No longer Available</h6>";
                                 }
                                 echo "</div>";
                                 echo '</a>';
