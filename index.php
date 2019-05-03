@@ -86,6 +86,9 @@ if ($conn->connect_error) {
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="make_new_user.php"><strong>REGISTER</strong></a>
+            </li>
           </ul>
         </div>
       </div>
