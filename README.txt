@@ -1,27 +1,22 @@
-in terminal, run the command:
-/Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
+CSE 3330 - 001; Project
 
-SQL QUERIES FOR PART 3, TASK 2 TO RETRIEVE AND PRINT ALL THE DATA IN THE DATABASE-
+Prepared By:
+Jamshed Jahangir
+Tausif Zaman
+Harsh Aggarwal
 
-SELECT * FROM ANIMAL
-SELECT * FROM ADMIN
-SELECT * FROM ADOPTION
-SELECT * FROM GUEST
-SELECT * FROM HORSE
-SELECT * FROM INQUIRY
-SELECT * FROM LIKES
-SELECT * FROM PROFILE
-SELECT * FROM SNAKE
-SELECT * FROM DONATION
 
-SQL QUERIES FOR PART 3, some of TASK 3 QUERIES FOR WHICH WE DID NOT PREPARE THE ONLINE PAGES, WE ARE USING COMMAND LINE INTERFACES FOR THESE 3 TRANSACTIONS-
-
-TRANSACTION 3.6: (We made a web page for this too, but it only lists donations)
-Select * FROM Donation where donation where use donator_id=“INPUT_VALUE”
-Select * from inquiry where use sender_id=“INPUT_VALUE”
-
-TRANSACTION 3.8: (The webpage for this transaction is not functioning well)
-select * from donation where Donation_date=“INPUT_VALUE"
-
-TRANSACTION 3.9: (We made a webpage for this too, perfectly functional but we thought we should still list it!)
-Select * from inquiry where animal_info=“INPUT_VALUE”
+Source Code Structure:
+- index.php is the homepage for our website.
+- Most other pages can be accessed from the homepage.
+- The 'delete animal' features has to be accessed by specifying the URL:
+  http://[localhost]/delete_animal.php
+- The 'update animal' features has to be accessed by specifying the URL:
+  http://[localhost]/update_animal.php
+- The Specific_Queries folders has:
+      List_Donations_On_Date.php
+      List_User_Donations.php
+      Specific_Animal_Inquiries.php
+    Each of these have to be access by specifying the URL + the php file name:
+      http://[localhost]/update_animal.php/[filename]
+  - The assets folder contains our images, and supplemental css and javascript files.
