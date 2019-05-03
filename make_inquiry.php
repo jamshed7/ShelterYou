@@ -99,21 +99,10 @@ if ($conn->connect_error) {
                         <input name="question" type="text" class="form-control" id="amount" placeholder="Question.." required="">
                       </fieldset>
                     </div>
-                    <!--
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div> -->
                     <div class="col-md-12">
                       <fieldset>
                         <button type="submit" id="form-submit" class="button">Send Inquiry</button>
                       </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="share">
-                        <h6>You can also keep in touch on: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
-                      </div>
                     </div>
                   </div>
                 </form>
