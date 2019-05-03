@@ -31,17 +31,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-/*
-$sql = "SELECT Name FROM ANIMAL";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Name is: " . $row["Name"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}*/
 ?>
 
   <body>
@@ -51,7 +40,7 @@ if ($result->num_rows > 0) {
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>JJ will add a nice line here</span>
+            <span>Snakes will be Snakes</span>
           </div>
         </div>
       </div>
@@ -67,19 +56,12 @@ if ($result->num_rows > 0) {
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.php">Return to Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products
+              <a class="nav-link" href="animals.php">Animals
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-              <span class="sr-only">(current)</span>
             </li>
           </ul>
         </div>
@@ -114,13 +96,6 @@ if ($result->num_rows > 0) {
                         <input name="animalID" type="integer" class="form-control" id="animalID" placeholder="Animal ID to adopt.." required="">
                       </fieldset>
                     </div>
-
-                    <!--
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div> -->
                     <div class="col-md-12">
                       <fieldset>
                         <button type="submit" id="form-submit" class="button">ADOPT NOW</button>

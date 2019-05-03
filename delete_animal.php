@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/flex-slider.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+
   </head>
   <?php
 $servername = "localhost";
@@ -33,27 +30,17 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-/*
-$sql = "SELECT Name FROM ANIMAL";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Name is: " . $row["Name"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}*/
+
 ?>
 
   <body>
-    
+
     <!-- Pre Header -->
     <div id="pre-header">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>JJ is a fugly hoe <\3</span>
+            <span>Don't delete meeeeeeeee <\3</span>
           </div>
         </div>
       </div>
@@ -69,19 +56,12 @@ if ($result->num_rows > 0) {
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.php">Return to Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products
+              <a class="nav-link" href="animals.php">Animal
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-              <span class="sr-only">(current)</span>
             </li>
           </ul>
         </div>
@@ -99,7 +79,7 @@ if ($result->num_rows > 0) {
               <h1>Delete Animal Entry</h1>
             </div>
           </div>
-          
+
           </div>
           <div class="col-md-6">
             <div class="right-content">
@@ -111,22 +91,11 @@ if ($result->num_rows > 0) {
                         <input name="Animal_ID" type="integer" class="form-control" id="Animal_ID" placeholder="Animal ID to delete entry.." required="">
                       </fieldset>
                     </div>
-              
-                    <!--
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div> -->
+
                     <div class="col-md-12">
                       <fieldset>
                         <button type="submit" id="form-submit" class="button">DELETE</button>
                       </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="share">
-                        <h6>You can also keep in touch on: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
-                      </div>
                     </div>
                   </div>
                 </form>
@@ -155,41 +124,6 @@ mysqli_query($result);
 $conn->close();
 ?>
 
-        <!-- Footer Starts Here -->
-        <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="logo">
-              <img src="assets/images/header-logo.png" alt="">
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">How It Works ?</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="social-icons">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer Ends Here -->
-
 
     <!-- Sub Footer Starts Here -->
     <div class="sub-footer">
@@ -197,8 +131,7 @@ $conn->close();
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 ShelterYou 
-               <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+              <p>Copyright &copy; 2019 Jamshed Jahangir</p>
             </div>
           </div>
         </div>
