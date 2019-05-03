@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/flex-slider.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+
   </head>
   <?php
 $servername = "localhost";
@@ -33,27 +30,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-/*
-$sql = "SELECT Name FROM ANIMAL";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Name is: " . $row["Name"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}*/
 ?>
 
   <body>
-    
+
     <!-- Pre Header -->
     <div id="pre-header">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>JJ will add a nice line here</span>
+            <span>Change is good</span>
           </div>
         </div>
       </div>
@@ -69,19 +55,12 @@ if ($result->num_rows > 0) {
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.php">Return to Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">Products
+              <a class="nav-link" href="animals.php">Animals
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-              <span class="sr-only">(current)</span>
             </li>
           </ul>
         </div>
@@ -89,7 +68,6 @@ if ($result->num_rows > 0) {
     </nav>
 
         <!-- Page Content -->
-    <!-- About Page Starts Here -->
     <div class="contact-page">
       <div class="container">
         <div class="row">
@@ -99,7 +77,7 @@ if ($result->num_rows > 0) {
               <h1>Update an Animal's info</h1>
             </div>
           </div>
-          
+
           </div>
           <div class="col-md-6">
             <div class="right-content">
@@ -141,7 +119,7 @@ if ($result->num_rows > 0) {
                         <button type="submit" id="submit" class="button">UPDATE!</button>
                       </fieldset>
                     </div>
-                    
+
                   </div>
                 </form>
               </div>
@@ -159,49 +137,10 @@ if ($result->num_rows > 0) {
 <?php $Color = $_POST["Color"]; ?>
 <?php $Description = $_POST["Description"]; ?>
 
-<!--INSERT INTO `PROFILE` (`Profile_ID`, `First_Name`, `Last_Name`, `Profile_type`, `Mobile_Number`, `Email`, `Username`, `Password`, `Join_Date`) VALUES
-(1, 'Harsh', 'Aggarwal', 'Guest', '999-999-9999', 'harsh.aggarwal@mavs.uta.edu', 'harsh8', 'password', '2019-04-29 00:00:00');
--->
 <?php $sql = "UPDATE ANIMAL SET Name='$Name', Age='$Age', Size='$Size', Color='$Color', Description='$Description' WHERE Animal_ID='$anID';";
   $result = $conn->query($sql);
   mysqli_query($result);
 ?>
-
-        <!-- Footer Starts Here -->
-        <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="logo">
-              <img src="assets/images/header-logo.png" alt="">
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">How It Works ?</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="social-icons">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer Ends Here -->
-
 
     <!-- Sub Footer Starts Here -->
     <div class="sub-footer">
@@ -209,8 +148,7 @@ if ($result->num_rows > 0) {
         <div class="row">
           <div class="col-md-12">
             <div class="copyright-text">
-              <p>Copyright &copy; 2019 ShelterYou 
-               <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+              <p>Copyright &copy; 2019 Jamshed Jahangir</p>
             </div>
           </div>
         </div>
