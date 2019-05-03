@@ -6,7 +6,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Add an Animal!</title>
+    <title>Delete Animal Entry</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>JJ will add a nice line here</span>
+            <span>JJ is a fugly hoe <\3</span>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ if ($result->num_rows > 0) {
           <div class="col-md-12">
             <div class="section-heading">
               <div class="line-dec"></div>
-              <h1>Add new animal</h1>
+              <h1>Delete Animal Entry</h1>
             </div>
           </div>
           
@@ -106,43 +106,12 @@ if ($result->num_rows > 0) {
               <div class="container">
                 <form id="contact" action="" method="post">
                   <div class="row">
-                    <div class="col-md-8">
-                      <fieldset><br>
-                        <select input name="Animal_type" type="select" class="form-control" id="Animal_type" placeholder="Choose Animal Type" required=""><option></option><option>Horse</option><option>Snake</option>
-						</fieldset>
-						</select></td><br></div>
-                      </div>
-                    <div class="col-md-8">
+                   <div class="col-md-12">
                       <fieldset>
-                        <input name="Name" type="text" class="form-control" id="Name" placeholder="Name the animal!" required="">
+                        <input name="Animal_ID" type="integer" class="form-control" id="Animal_ID" placeholder="Animal ID to delete entry.." required="">
                       </fieldset>
                     </div>
-                    <div class="col-md-8">
-                      <fieldset>
-                        <input name="Age" type="number" min="0" class="form-control" id="Age" placeholder="How old are they?" required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-8">
-                      <fieldset>
-                        <select input name="Size" type="select" class="form-control" id="Size" placeholder="Big boi or nah?" required=""><option></option><option>Small</option><option>Medium</option><option>Large</option>
-                      </fieldset>
-                    </select></td><br></div>
-                    <div class="col-md-8">
-                      <fieldset>
-                        <input name="Breed" type="text" class="form-control" id="Breed" placeholder="What Breed?" required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-8">
-                      <fieldset>
-                        <input name="Color" type="text" class="form-control" id="Color" placeholder="Color?" required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-8">
-                      <fieldset>
-                        <input name="Description" type="text" class="form-control" id="Description" placeholder="Describe em!" required="">
-                      </fieldset>
-                    </div>
-                  			
+              
                     <!--
                     <div class="col-md-12">
                       <fieldset>
@@ -151,7 +120,7 @@ if ($result->num_rows > 0) {
                     </div> -->
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="submit" class="button">ADD ANIMAL!</button>
+                        <button type="submit" id="form-submit" class="button">DELETE</button>
                       </fieldset>
                     </div>
                     <div class="col-md-12">
@@ -168,27 +137,22 @@ if ($result->num_rows > 0) {
       </div>
     </div>
 
-<?php $Animal_type = $_POST['Animal_type']; ?>
-<?php $Name = $_POST['Name']; ?>
-<?php $Age = $_POST['Age']; ?>
-<?php $Size = $_POST['Size']; ?>
-<?php $Breed = $_POST['Breed']; ?>
-<?php $Color = $_POST['Color']; ?>
-<?php $Description = $_POST['Description']; ?>
-<?php $d=strtotime("today"); 
-$Posted_date = date("Y-m-d h:i:s", $d); ?>
 
-<?php $sql = "INSERT INTO animal(Animal_type, Name, Age, Size, Breed, Color, Posted_date, Description, Is_available, Num_of_likes) VALUES ('$Animal_type','$Name','$Age','$Size','$Breed','$Color','$Posted_date','$Description','1','0');";
+<?php $Animal_ID = $_POST["Animal_ID"]; ?>
 
-  $result = $conn->query($sql);
+<?php $sql = "DELETE FROM ANIMAL WHERE Animal_ID='$Animal_ID'";
+      $result = $conn->query($sql);
+      $sql = "DELETE FROM DONATION WHERE Donatee_ID='$Animal_ID'";
+      $result = $conn->query($sql);
+      $sql = "DELETE FROM ADOPTION WHERE Adopted_animal_info='$Animal_ID'";
+      $result = $conn->query($sql);
+      $sql = "DELETE FROM Horse WHERE Animal_ID='$Animal_ID'";
+      $result = $conn->query($sql);
+      $sql = "DELETE FROM Snake WHERE Animal_ID='$Animal_ID'";
+      $result = $conn->query($sql);
+mysqli_query($result);
 
-if ($Animal_type=="Horse") {
-    $sql = "INSERT INTO Horse VALUES (@@IDENTITY,0);";
-} else {
-    $sql = "INSERT INTO Snake VALUES (@@IDENTITY,0);";
-}
-  $result = $conn->query($sql);
-  mysqli_query($result);
+$conn->close();
 ?>
 
         <!-- Footer Starts Here -->
