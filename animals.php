@@ -127,7 +127,19 @@ https://www.tooplate.com/view/2114-pixie
               echo '<img src="assets/animal_pics/'.$i++.'.jpg" alt="">';
               //echo '<img src="assets/images/product-01.jpg" alt="">';
               echo '<h4>'.$row["Name"].'</h4>';
-              echo '<h6>'.$row["Description"].'</h6>';
+              if($row[Is_available])
+              {
+                echo "<h6>Is Available</h6></br>";
+              }
+              else
+              {
+                echo "<h6>No longer Advailabe</h6></br>";
+              }
+              echo '<h6>Type: '.$row["Animal_type"].'</h6>';
+              echo '<p>Age: '.$row["Age"].' years</p>';
+              echo '<p>Size: '.$row["Size"].'</p>';
+              echo '<p>'.$row["Description"].'</p></br>';
+              echo '<p><strong>Likes:</strong> '.$row["Likes"].'</p>';
               echo '</div>';
               echo '</a>';
               echo '</div>';

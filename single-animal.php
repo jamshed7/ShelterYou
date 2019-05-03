@@ -1,3 +1,19 @@
+<?php
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "ANIMAL_SHELTER";
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +25,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Pixie - Product Detail</title>
+    <title>ShelterYou - Animal Detail</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,10 +36,7 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/flex-slider.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+
   </head>
 
   <body>
@@ -33,7 +46,7 @@ https://www.tooplate.com/view/2114-pixie
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>Suspendisse laoreet magna vel diam lobortis imperdiet</span>
+            <span>Life is like an animal, adopt it!</span>
           </div>
         </div>
       </div>
@@ -49,18 +62,12 @@ https://www.tooplate.com/view/2114-pixie
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="index.php">Back to Home</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="animals.php">Products
+              <a class="nav-link" href="animals.php">Animals
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -146,164 +153,7 @@ https://www.tooplate.com/view/2114-pixie
     <!-- Single Page Ends Here -->
 
 
-    <!-- Similar Starts Here -->
-    <div class="featured-items">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <div class="line-dec"></div>
-              <h1>You May Also Like</h1>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-carousel owl-theme">
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-01.jpg" alt="Item 1">
-                  <h4>Proin vel ligula</h4>
-                  <h6>$15.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-02.jpg" alt="Item 2">
-                  <h4>Erat odio rhoncus</h4>
-                  <h6>$25.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-03.jpg" alt="Item 3">
-                  <h4>Integer vel turpis</h4>
-                  <h6>$35.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 4">
-                  <h4>Sed purus quam</h4>
-                  <h6>$45.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 5">
-                  <h4>Morbi aliquet</h4>
-                  <h6>$55.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 6">
-                  <h4>Urna ac diam</h4>
-                  <h6>$65.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-04.jpg" alt="Item 7">
-                  <h4>Proin eget imperdiet</h4>
-                  <h6>$75.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-05.jpg" alt="Item 8">
-                  <h4>Nullam risus nisl</h4>
-                  <h6>$85.00</h6>
-                </div>
-              </a>
-              <a href="single-animal.php">
-                <div class="featured-item">
-                  <img src="assets/images/item-06.jpg" alt="Item 9">
-                  <h4>Cras tempus</h4>
-                  <h6>$95.00</h6>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Similar Ends Here -->
 
-
-    <!-- Subscribe Form Starts Here -->
-    <div class="subscribe-form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <div class="line-dec"></div>
-              <h1>Subscribe on PIXIE now!</h1>
-            </div>
-          </div>
-          <div class="col-md-8 offset-md-2">
-            <div class="main-content">
-              <p>Godard four dollar toast prism, authentic heirloom raw denim messenger bag gochujang put a bird on it celiac readymade vice.</p>
-              <div class="container">
-                <form id="subscribe" action="" method="get">
-                  <div class="row">
-                    <div class="col-md-7">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email"
-                        onfocus="if(this.value == 'Your Email...') { this.value = ''; }"
-                    	onBlur="if(this.value == '') { this.value = 'Your Email...';}"
-                    	value="Your Email..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-5">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">Subscribe Now!</button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Subscribe Form Ends Here -->
-
-
-
-    <!-- Footer Starts Here -->
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="logo">
-              <img src="assets/images/header-logo.png" alt="">
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">How It Works ?</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="social-icons">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer Ends Here -->
 
 
     <!-- Sub Footer Starts Here -->
