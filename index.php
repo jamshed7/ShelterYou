@@ -152,7 +152,7 @@ https://www.tooplate.com/view/2114-pixie
                             {
                               while( $row = mysqli_fetch_array($result) )
                               {
-                                echo '<a href="single-animal.php">';
+                                echo '<a href="#">';
                                 echo '<img src="assets/animal_pics/'.$i++.'.jpg" alt="Item 1">';
                                 echo "<div>";
                                 echo "<h4>".$row["Name"]."</h4>";
