@@ -35,15 +35,10 @@ if ($conn->connect_error) {
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
+
   </head>
 
-
   <body>
-
     <!-- Pre Header -->
     <div id="pre-header">
       <div class="container">
@@ -105,6 +100,9 @@ https://www.tooplate.com/view/2114-pixie
               <button class="btn btn-primary" data-filter="*">All Animals</button>
               <button class="btn btn-primary" data-filter=".Horse">Horses</button>
               <button class="btn btn-primary" data-filter=".Snake">Snakes</button>
+              <button class="btn btn-primary" data-filter=".Large">Large</button>
+              <button class="btn btn-primary" data-filter=".Medium">Medium</button>
+              <button class="btn btn-primary" data-filter=".Small">Small</button>
             </div>
           </div>
         </div>
@@ -113,7 +111,6 @@ https://www.tooplate.com/view/2114-pixie
 
     <div class="featured container no-gutter">
         <div class="row posts">
-
           <?php
           $query = "SELECT * FROM ANIMAL";
           $i = 1;
@@ -121,13 +118,27 @@ https://www.tooplate.com/view/2114-pixie
           {
             while( $row = mysqli_fetch_array($result) )
             {
-              echo '<div id="'.$i.'" class="item '.$row[Animal_type].' col-md-4">';
-              echo '<a href="single-animal.php">';
+              echo '<div id="'.$i.'" class="item '.$row[Animal_type].' '.$row[Size].' col-md-4">';
+              echo '<a href="adopt_animal.php">';
               echo '<div class="featured-item">';
               echo '<img src="assets/animal_pics/'.$i++.'.jpg" alt="">';
-              //echo '<img src="assets/images/product-01.jpg" alt="">';
               echo '<h4>'.$row["Name"].'</h4>';
-              echo '<h6>'.$row["Description"].'</h6>';
+              if($row[Is_available])
+              {
+                echo "<h6>Is Available</h6>";
+              }
+              else
+              {
+                echo "<h6>No longer Advailabe</h6>";
+              }
+              echo '<p><strong>Animal ID:</strong> '.$row["Animal_ID"].'</p></br>';
+              echo '<h6>Type: '.$row["Animal_type"].'</h6>';
+              echo '<p>Age: '.$row["Age"].' years</p>';
+              echo '<p>Size: '.$row["Size"].'</p>';
+              echo '<p>Breed: '.$row["Breed"].'</p>';
+              echo '<p>Color: '.$row["Color"].'</p>';
+              echo '<p><strong>'.$row["Description"].'</strong></p></br>';
+              echo '<p><strong>Likes:</strong> '.$row["Likes"].'</p>';
               echo '</div>';
               echo '</a>';
               echo '</div>';
@@ -137,28 +148,10 @@ https://www.tooplate.com/view/2114-pixie
             echo "0 results";
           }
            ?>
-
-
-
-
         </div>
-
     </div>
 
-    <div class="page-navigation">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul>
-              <li class="current-page"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     <!-- Featred Page Ends Here -->
 
 

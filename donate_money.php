@@ -30,17 +30,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-/*
-$sql = "SELECT Name FROM ANIMAL";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Name is: " . $row["Name"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}*/
 ?>
 
   <body>
@@ -50,7 +39,7 @@ if ($result->num_rows > 0) {
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>JJ will add a nice line here</span>
+            <span>When life gives you lemons, adopt an animal!</span>
           </div>
         </div>
       </div>
@@ -114,21 +103,10 @@ if ($result->num_rows > 0) {
                         <input name="amount" type="float" class="form-control" id="amount" placeholder="Donation amount.." required="">
                       </fieldset>
                     </div>
-                    <!--
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div> -->
                     <div class="col-md-12">
                       <fieldset>
                         <button type="submit" id="form-submit" class="button">Donate now!</button>
                       </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="share">
-                        <h6>You can also keep in touch on: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
-                      </div>
                     </div>
                   </div>
                 </form>
